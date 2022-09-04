@@ -1,0 +1,300 @@
+/*Estilos globales*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*Declaracion de variables*/
+:root{
+    --ColorHeaderFooter: #1A1B1C;
+    --ColorMain: #222326;
+    --ColorSection: #727683;
+}
+
+/*---------------------------Background para todas las paginas---------------------------*/
+.header, #header{
+    background: var(--ColorHeaderFooter);
+}
+
+.main, #main{
+    background: var(--ColorMain);
+}
+
+.section, #section{
+    background: var(--ColorSection);
+}
+
+.footer, #footer{
+    background: var(--ColorHeaderFooter);
+    color: #4b4c4d;
+}
+
+/*---------------------------Footer para todas las paginas---------------------------*/
+
+.footer a, #footer a{
+    color: #4b4c4d ;
+    /* color: #fff; */
+}
+
+.footer .icons, #footer .icons{
+    border: 1px solid ;
+    border-radius: 50%;
+}
+
+.footer i, #footer i{
+    width: 30px;
+}
+
+/*---------------------------Pagina Home---------------------------*/
+/* .cards_home .card{
+    width: 280px !important;
+    height: 350px !important;
+}
+
+#home .section .row{
+    gap: 70px;
+} */
+
+
+/*---------------------------Pagina Servicios---------------------------*/
+#services .card{
+    height: 350px;
+    width: 90% !important;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition: all 400ms ease;
+    cursor: default;
+}
+
+#services .card img{
+    height: 50%;
+}
+
+#services .section .col{
+    width: 40%;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
+    transform: translateY(-3%);
+}
+
+/*----------------Layout GRID para Productos, Nosotros y Contacto----------------*/
+
+.grid_container{
+    display: grid;
+    grid-template: 
+    "header" auto 
+    "main" 50vh
+    "section" auto
+    "footer" auto /
+    100%;
+}
+
+#header{grid-area: header;}
+#main{grid-area: main;}
+#section{grid-area: section;}
+#footer{grid-area: footer;}
+
+/*---------------------------Main para todas las paginas---------------------------*/
+#main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+#main .title, #main p{
+    color: #fff;
+    padding: 15px;
+}
+
+/*---------------------------Pagina para Productos---------------------------*/
+
+#productos #section{
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(2, 400px);
+    justify-content: center;
+    padding: 50px;
+    gap: 50px;
+}
+
+.cards{
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.img_producto{
+    height: 50%;
+    margin-top: 30px;
+}
+
+.description{
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 13px;
+}
+
+.price_cart{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price p, .cart p{
+    margin: 0;
+    color: #fff;
+}
+
+.price{
+    background: #184770;
+    width: 110px;
+    height: 50px;
+    border-radius: 0 15px 0 0;
+}
+
+.cart{
+    background: #7088A0;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+/*---------------------------Pagina para Nosotros---------------------------*/
+
+#nosotros #section{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px,1fr));
+    grid-template-rows: repeat(1, auto);
+    justify-content: center;
+    padding: 5em;
+    gap: 80px;
+}
+
+.comment{
+    background: #171717;
+    color: #fff;
+    text-align: center;
+}
+
+.img_user{
+    height: 90px;
+    object-fit: cover;
+    margin-top: -50px;
+}
+
+.name_user{
+    font-size: 30px;
+    padding: 20px;
+    margin: 0;
+}
+
+.stars i{
+    color: #e91e63;
+    padding: 0 0 2em 0 ;
+    font-size: 20px;
+}
+
+.opinion{
+    padding: 12px;
+}
+
+/*---------------------------Pagina para Contacto---------------------------*/
+#contacto #section{
+    padding: 5em;
+    display: flex;
+    justify-content: center;
+}
+
+#contacto .contactUs{
+    display: grid;
+    grid-template-columns: minmax(263px, 800px) 300px;
+    grid-template-rows: repeat(1, 500px);
+    justify-content: center;
+    box-shadow: 0 0 20px 0 rgba(225, 225, 225, .3);
+}
+
+.form_box{
+    background: #222222;
+}
+
+.form-control{
+    background: none;
+    border: none;
+    border-bottom: 1px solid #d63031;
+    border-radius: 0;
+    outline: 0;
+    color: #fff;
+}
+
+.btn{
+    background: #d63031;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn:hover{
+    background: red;
+    color: black;
+}
+
+.info_contact{
+    background: #000;
+    color: #4b4c4d;
+}
+
+/*----------------------------Responsive tablet--------------------------------*/
+
+@media (max-width: 992px){
+
+    /*Pagina Servicios*/
+    #services .card img{
+        height: 50% !important;
+    }
+    #services .section .card{
+        height: auto;
+    }
+    #services .section .col{
+        width: 80% !important;
+    }
+
+    /*Pagina Productos*/
+    #productos #section{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 450px);
+    }
+
+    /*Pagina Contacto*/
+    #contacto .contactUs{
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: 500px auto;
+        justify-content: center;
+    }
+}    
+
+/*----------------------------Responsive mobile--------------------------------*/
+
+@media (max-width: 580px){
+
+    /*Pagina Productos*/
+    #productos #section{
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, 450px);
+    }
+
+    /*Pagina Nosotros*/
+    #nosotros #section{
+        grid-template-columns: repeat(1, 80%);
+        grid-template-rows: repeat(3, auto);
+        padding: 5em 0;
+    }
+
+    /*Pagina Contacto*/
+    #contacto #section{
+        padding: 2em;
+    }
+}
+
