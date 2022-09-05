@@ -13,17 +13,11 @@
 }
 
 /*---------------------------Background para todas las paginas---------------------------*/
-.header, #header{
-    background: var(--ColorHeaderFooter);
-}
+.header, #header{ background: var(--ColorHeaderFooter); }
 
-.main, #main{
-    background: var(--ColorMain);
-}
+.main, #main{ background: var(--ColorMain); }
 
-.section, #section{
-    background: var(--ColorSection);
-}
+.section, #section{ background: var(--ColorSection); }
 
 .footer, #footer{
     background: var(--ColorHeaderFooter);
@@ -31,16 +25,20 @@
 }
 
 /*---------------------------Header para todas las paginas---------------------------*/
-#home .nav-link:hover{
+.nav-link:hover{
     background: orange;
     transition: .5s;
 }
+
+.navbar-brand, .tech{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+} 
 
 /*---------------------------Footer para todas las paginas---------------------------*/
 
 .footer a, #footer a{
     color: #4b4c4d ;
-    /* color: #fff; */
 }
 
 .footer .icons, #footer .icons{
@@ -290,7 +288,14 @@
 
 @media (max-width: 580px){
     /*All Headers*/
-    .logotype .logo{height: 60px;}
+    .logotype .logo{
+        height: 55px;
+    }
+
+    /*Pagina Home*/
+    .carousel-item img{
+        object-fit:cover ;
+    }
 
     /*Pagina Productos*/
     #productos #section{
