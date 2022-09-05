@@ -19,10 +19,7 @@
 
 .section, #section{ background: var(--ColorSection); }
 
-.footer, #footer{
-    background: var(--ColorHeaderFooter);
-    color: #4b4c4d;
-}
+.footer, #footer{ background: var(--ColorHeaderFooter); }
 
 /*---------------------------Header para todas las paginas---------------------------*/
 .nav-link:hover{
@@ -37,7 +34,7 @@
 
 /*---------------------------Footer para todas las paginas---------------------------*/
 
-.footer a, #footer a{
+.footer a, #footer a, .footer p, #footer p{
     color: #4b4c4d ;
 }
 
