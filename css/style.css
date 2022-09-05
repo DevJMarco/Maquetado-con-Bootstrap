@@ -30,6 +30,12 @@
     color: #4b4c4d;
 }
 
+/*---------------------------Header para todas las paginas---------------------------*/
+#home .nav-link:hover{
+    background: orange;
+    transition: .5s;
+}
+
 /*---------------------------Footer para todas las paginas---------------------------*/
 
 .footer a, #footer a{
@@ -47,15 +53,16 @@
 }
 
 /*---------------------------Pagina Home---------------------------*/
-/* .cards_home .card{
-    width: 280px !important;
-    height: 350px !important;
+#home .card{
+    width: 320px;
+    transition: 0.5s ease;
+    cursor: pointer;
 }
 
-#home .section .row{
-    gap: 70px;
-} */
-
+#home .card:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
 
 /*---------------------------Pagina Servicios---------------------------*/
 #services .card{
@@ -74,7 +81,7 @@
     width: 40%;
 }
 
-.card:hover{
+#services .card:hover{
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.7);
     transform: translateY(-3%);
 }
@@ -162,6 +169,10 @@
     align-items: center;
     margin-right: 30px;
 }
+
+.img_producto, .description, .price p, .cart p{
+    cursor: pointer;
+} 
 
 /*---------------------------Pagina para Nosotros---------------------------*/
 
@@ -278,6 +289,8 @@
 /*----------------------------Responsive mobile--------------------------------*/
 
 @media (max-width: 580px){
+    /*All Headers*/
+    .logotype .logo{height: 60px;}
 
     /*Pagina Productos*/
     #productos #section{
@@ -297,4 +310,3 @@
         padding: 2em;
     }
 }
-
